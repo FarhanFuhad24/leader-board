@@ -14,6 +14,7 @@ header{
 .logo{
     color: white;
     font-size: 50px;
+    text-decoration: none;
 }
 nav a{
     text-decoration: none;
@@ -135,3 +136,64 @@ hr{
 .duration{
     margin-right: 50px;
 }
+    header .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 20px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    nav a{
+        display: flex;
+        flex-direction: column reverse;
+        padding: 10px;
+        margin-right: 20px;
+    }
+    .container{
+        width: 100%;
+    }
+    .players, .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+/* media query */
+@media only screen and (max-width:688px){
+    header{
+        height: 200px;
+        display: flex;
+        align-items: center;
+        }
+        header .logo{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container{
+            width: 100%;
+        }
+        .players, .blogs{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .player{
+            flex-direction: column;
+        }
+        .courses{
+            grid-template-columns: repeat(1, 1fr);
+            margin-left: 20px;
+        }
+        .course{
+            padding-bottom: 50px;
+        }
+
+    }
